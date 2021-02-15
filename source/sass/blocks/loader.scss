@@ -7,6 +7,11 @@
   height: 100vh;
 }
 
+.loader.hide {
+  animation: fromTop $modal-transition-settings;
+  animation-fill-mode: forwards;
+}
+
 .loader__logo {
   max-width: 800px;
   width: 100%;
