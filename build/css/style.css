@@ -570,6 +570,17 @@ button,
     -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px); } }
 
+.header {
+  display: block;
+  padding: 25px; }
+
+.header__logo {
+  display: block; }
+
+.header__logo svg {
+  width: 192px;
+  height: 24px; }
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
