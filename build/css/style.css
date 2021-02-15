@@ -722,6 +722,9 @@ button,
   -webkit-transform: translateY(5px);
           transform: translateY(5px); }
 
+.main {
+  padding: 120px 0 0; }
+
 .main__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -741,7 +744,7 @@ button,
 .main__intro-title {
   font-size: 30px;
   color: #000000;
-  margin: 35px 0 0; }
+  margin: 30px 0 0; }
 
 .main__title,
 .main__intro-title {
