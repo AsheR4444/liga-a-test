@@ -3,6 +3,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/init-modals';
 import './loader';
+import './events';
 
 // Utils
 // ---------------------------------
