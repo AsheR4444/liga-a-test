@@ -1,0 +1,29 @@
+.main {
+}
+
+.main__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__title {
+  font-size: 96px;
+  color: $color-neon-blue;
+  margin: 0 40px 0 0;
+}
+
+.main__intro {
+  width: 35%;
+}
+
+.main__intro-title {
+  font-size: 30px;
+  color: $color-default-black;
+  margin: 35px 0 0;
+}
+
+.main__title,
+.main__intro-title {
+  line-height: 1.2;
+  font-weight: 400;
+}
