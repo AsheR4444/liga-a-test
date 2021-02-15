@@ -1,0 +1,47 @@
+.burger-button {
+  padding: 0;
+  border: none;
+  background: none;
+  width: 30px;
+  height: 20px;
+
+  @media (min-width: $viewport--lg) {
+    display: none;
+  }
+}
+
+.burger-button:focus {
+  outline: 0;
+}
+
+.burger-button:hover .burger-button__line,
+.burger-button:focus .burger-button__line,
+.burger-button:hover::before,
+.burger-button:hover::after,
+.burger-button:focus::before,
+.burger-button:focus::after {
+  background-color: $color-torch-red;
+}
+
+.burger-button__line,
+.burger-button::before,
+.burger-button::after {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: $color-neon-blue;
+  transition: background-color $default-transition-settings;
+}
+
+.burger-button::before,
+.burger-button::after {
+  content: "";
+}
+
+.burger-button::before {
+  transform: translateY(-5px);
+}
+
+.burger-button::after {
+  transform: translateY(5px);
+}

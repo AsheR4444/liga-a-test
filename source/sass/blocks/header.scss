@@ -1,6 +1,13 @@
 .header {
   display: block;
   padding: 25px;
+  background: $color-default-white;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
@@ -10,4 +17,46 @@
 .header__logo svg {
   width: 192px;
   height: 24px;
+}
+
+.header__nav {
+  display: none;
+
+  @media (min-width: $viewport--lg) {
+    display: block;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-item {
+  list-style: none;
+}
+
+.header__nav-item + .header__nav-item {
+  margin-left: 24px;
+}
+
+.header__nav-link {
+  font-size: 14px;
+  position: relative;
+  font-weight: 500;
+  transition: color $default-transition-settings;
+  padding: 5px 0;
+
+  &:hover,
+  &:focus {
+    color: $color-neon-blue;
+  }
+}
+
+.header__nav-link svg {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  top: 0;
+  right: -7px;
 }
