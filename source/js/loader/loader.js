@@ -8,7 +8,7 @@ const initLoader = () => {
 
       setTimeout(() => {
         loader.remove();
-      }, 600)
+      }, 599)
     }
 
   };

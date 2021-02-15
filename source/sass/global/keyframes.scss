@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes fromTop {
+@keyframes toTop {
   0% {
     opacity: 0;
     transform: translateY(0);
@@ -19,5 +19,17 @@
   100% {
     opacity: 1;
     transform: translateY(-1000px);
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

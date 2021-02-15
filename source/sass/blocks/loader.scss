@@ -6,11 +6,10 @@
   padding-bottom: 100px;
   height: 100vh;
   z-index: 1500;
-  display: none;
 }
 
 .loader.hide {
-  animation: fromTop $modal-transition-settings;
+  animation: toTop $modal-transition-settings;
   animation-fill-mode: forwards;
 }
 
