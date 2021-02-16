@@ -9,7 +9,7 @@
 }
 
 .loader.hide {
-  animation: toTop $modal-transition-settings;
+  animation: toTop $custom-animation-settings;
   animation-fill-mode: forwards;
 }
 

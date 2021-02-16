@@ -8,7 +8,8 @@ const initLoader = () => {
 
       setTimeout(() => {
         loader.remove();
-      }, 599)
+        document.querySelector('#main-wrapper').style = 'display: block; opacity: 1;';
+      }, 1999)
     }
 
   };

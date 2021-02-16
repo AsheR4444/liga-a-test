@@ -5,6 +5,7 @@ import {initModals} from './modules/init-modals';
 import {disableScrolling} from './utils/scroll-lock';
 import './loader';
 import './animation';
+import './clicker';
 
 // Utils
 // ---------------------------------
@@ -16,4 +17,4 @@ iosVhFix();
 // ---------------------------------
 
 initModals();
-disableScrolling();
+/* disableScrolling(); */
