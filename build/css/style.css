@@ -591,9 +591,14 @@ button,
             transform: translateY(0); } }
 
 .header {
-  display: block;
+  display: none;
   padding: 25px;
-  background: #ffffff; }
+  background: #ffffff;
+  -webkit-animation: fromTop 0.3s ease;
+          animation: fromTop 0.3s ease; }
+
+.header.visible {
+  display: block; }
 
 .header__wrapper {
   display: -webkit-box;

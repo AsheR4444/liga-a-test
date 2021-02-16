@@ -1,7 +1,12 @@
 .header {
-  display: block;
+  display: none;
   padding: 25px;
   background: $color-default-white;
+  animation: fromTop 0.3s ease;
+}
+
+.header.visible {
+  display: block;
 }
 
 .header__wrapper {
