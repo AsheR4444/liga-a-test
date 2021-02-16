@@ -483,8 +483,7 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  min-height: calc(100 * var(--vh, 1vh));
-  overflow-x: hidden; }
+  min-height: calc(100 * var(--vh, 1vh)); }
   .wrapper--no-scrollbar {
     height: 100vh;
     height: calc(100 * var(--vh, 1vh));
@@ -551,29 +550,52 @@ button,
     opacity: 1; } }
 
 @-webkit-keyframes fromTop {
-  0% {
+  from {
     opacity: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0); }
-  100% {
+  to {
     opacity: 1;
     -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px); } }
 
 @keyframes fromTop {
-  0% {
+  from {
     opacity: 0;
     -webkit-transform: translateY(0);
             transform: translateY(0); }
-  100% {
+  to {
     opacity: 1;
     -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px); } }
 
+@-webkit-keyframes fromLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
 .header {
+  position: fixed;
+  width: 100%;
   display: block;
   padding: 25px;
-  background: #ffffff; }
+  background-color: #ffffff;
+  z-index: 100; }
 
 .header__wrapper {
   display: -webkit-box;
@@ -723,28 +745,92 @@ button,
           transform: translateY(5px); }
 
 .main {
-  padding: 120px 0 0; }
+  padding: 120px 0 0;
+  overflow: hidden;
+  height: 100vh; }
 
 .main__wrapper {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (min-width: 1024px) {
+    .main__wrapper {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 .main__title {
   font-size: 96px;
-  color: #2c39f2;
-  margin: 0 40px 0 0; }
+  color: #2c39f2; }
+  @media (min-width: 1024px) {
+    .main__title {
+      margin: 0 40px 0 0; } }
 
 .main__intro {
-  width: 35%; }
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 100%;
+  background-color: #2c39f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 200;
+  min-height: 100vh;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease; }
+  @media (min-width: 1024px) {
+    .main__intro {
+      background-color: transparent;
+      width: 35%;
+      min-height: auto;
+      -webkit-transform: translateX(0);
+              transform: translateX(0); } }
+
+.main__intro.animated {
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+.main__intro-wrapper {
+  max-width: 350px; }
+  @media (min-width: 1024px) {
+    .main__intro-wrapper {
+      max-width: none; } }
+
+@media (min-width: 1024px) {
+  .main__draco--small {
+    display: none; } }
+
+.main__draco--large {
+  display: none; }
+  @media (min-width: 1024px) {
+    .main__draco--large {
+      display: block; } }
 
 .main__intro-title {
   font-size: 30px;
-  color: #000000;
-  margin: 30px 0 0; }
+  margin: 30px 0 0;
+  color: #ffffff; }
+  @media (min-width: 1024px) {
+    .main__intro-title {
+      color: #000000; } }
 
 .main__title,
 .main__intro-title {
