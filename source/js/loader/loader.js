@@ -1,5 +1,6 @@
 const initLoader = () => {
   const loader = document.querySelector('#loader');
+  document.body.style = 'overflow: hidden;'
 
   const closeLoader = (e) => {
 
@@ -9,6 +10,7 @@ const initLoader = () => {
       setTimeout(() => {
         loader.remove();
         document.querySelector('#main-wrapper').style = 'display: block;';
+        document.body.removeAttribute("style");
       }, 1999)
     }
 

@@ -614,7 +614,12 @@ button,
   width: 100%;
   padding: 25px;
   background-color: #ffffff;
-  z-index: 1000; }
+  z-index: 1000;
+  -webkit-animation: fromTop 0.3s ease;
+          animation: fromTop 0.3s ease; }
+
+.header.visible {
+  display: block; }
 
 .header__wrapper {
   display: -webkit-box;
@@ -687,8 +692,7 @@ button,
           justify-content: center;
   padding-bottom: 100px;
   height: 100vh;
-  z-index: 1500;
-  display: none; }
+  z-index: 1500; }
 
 .loader.hide {
   -webkit-animation: toTop 2s ease;

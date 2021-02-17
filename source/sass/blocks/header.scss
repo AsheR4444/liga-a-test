@@ -4,6 +4,11 @@
   padding: 25px;
   background-color: $color-default-white;
   z-index: 1000;
+  animation: fromTop 0.3s ease;
+}
+
+.header.visible {
+  display: block;
 }
 
 .header__wrapper {
