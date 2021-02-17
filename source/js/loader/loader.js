@@ -8,7 +8,7 @@ const initLoader = () => {
 
       setTimeout(() => {
         loader.remove();
-        document.querySelector('#main-wrapper').style = 'display: block; opacity: 1;';
+        document.querySelector('#main-wrapper').style = 'display: block;';
       }, 1999)
     }
 
