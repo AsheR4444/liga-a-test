@@ -748,8 +748,10 @@ button,
   width: 30px;
   height: 2px;
   background: #2c39f2;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease; }
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
 
 .burger-button::before,
 .burger-button::after {
@@ -763,7 +765,21 @@ button,
   -webkit-transform: translateY(5px);
           transform: translateY(5px); }
 
+.burger-button.open::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.burger-button.open .burger-button__line {
+  display: none; }
+
+.burger-button.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
 .burger-menu {
+  display: none; }
+
+.burger-menu.opened {
   position: fixed;
   z-index: 1500;
   top: 75px;
@@ -784,6 +800,9 @@ button,
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center; }
+
+.burger-menu__list {
+  padding: 0; }
 
 .burger-menu__list-item {
   list-style: none; }

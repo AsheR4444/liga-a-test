@@ -30,7 +30,8 @@
   width: 30px;
   height: 2px;
   background: $color-neon-blue;
-  transition: background-color $default-transition-settings;
+  transition: background-color $default-transition-settings,
+    transform $default-transition-settings;
 }
 
 .burger-button::before,
@@ -46,7 +47,23 @@
   transform: translateY(5px);
 }
 
+.burger-button.open::before {
+  transform: rotate(45deg);
+}
+
+.burger-button.open .burger-button__line {
+  display: none;
+}
+
+.burger-button.open::after {
+  transform: rotate(-45deg);
+}
+
 .burger-menu {
+  display: none;
+}
+
+.burger-menu.opened {
   position: fixed;
   z-index: 1500;
   top: 75px;
@@ -58,6 +75,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.burger-menu__list {
+  padding: 0;
 }
 
 .burger-menu__list-item {

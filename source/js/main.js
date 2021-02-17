@@ -6,6 +6,7 @@ import {disableScrolling} from './utils/scroll-lock';
 import './loader';
 import './animation';
 import './clicker';
+import './opener';
 
 // Utils
 // ---------------------------------
