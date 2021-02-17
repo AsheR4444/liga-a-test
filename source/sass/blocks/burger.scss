@@ -5,6 +5,7 @@
   background: none;
   width: 30px;
   height: 20px;
+  cursor: pointer;
 
   @media (min-width: $viewport--lg) {
     display: none;
@@ -13,6 +14,11 @@
 
 .burger-button:focus {
   outline: 0;
+}
+
+.burger-button__line {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .burger-button:hover .burger-button__line,
@@ -27,12 +33,14 @@
 .burger-button__line,
 .burger-button::before,
 .burger-button::after {
+  position: absolute;
   display: block;
-  width: 30px;
+  width: 100%;
   height: 2px;
   background: $color-neon-blue;
   transition: background-color $default-transition-settings,
     transform $default-transition-settings;
+  left: 0;
 }
 
 .burger-button::before,
@@ -48,16 +56,27 @@
   bottom: 0;
 }
 
-.burger-button.open::before {
-  transform: rotate(45deg);
-}
-
 .burger-button.open .burger-button__line {
   display: none;
 }
 
-.burger-button.open::after {
+.burger-button.opened .burger-button__line {
+  display: none;
+}
+
+.burger-button.opened::before,
+.burger-button.opened::after {
+  top: 10px;
+}
+
+.burger-button.open::before {
+  top: initial;
   transform: rotate(-45deg);
+}
+
+.burger-button.open::after {
+  transform: rotate(45deg);
+  bottom: initial;
 }
 
 .burger-menu {

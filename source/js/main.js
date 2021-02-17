@@ -7,6 +7,7 @@ import './loader';
 import './animation';
 import './clicker';
 import './opener';
+import './events';
 
 // Utils
 // ---------------------------------
